@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>MRD Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Meta -->
+
+    <link rel="shortcut icon" href="logo.png"> 
+	
+    <link rel="stylesheet" href="assets/css/form.css">
+</head> 
+<body>
+    <div class="login-box">
+        <h2>Registration Form</h2>
+        <form id="form1" name="form1" method="POST">
+          <div class="user-box">
+            <input type="text" name="text1" required="1">
+            <label>Full Name</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="text2" required="1">
+            <label>Registration No.</label>
+          </div>
+          <div class="user-box">
+            <input type="email" name="text3" required="1">
+            <label>Email Id</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="text4" required="">
+            <label>Course</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="text5" required="">
+            <label>Contact number</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="text6" required="">
+            <label>WhatsApp number</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="text7" required="">
+            <label>Residential Address</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="text8" required="">
+            <label>School</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="text9" required="">
+            <label>Fields Of Interest</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="text12" required="">
+            <label>Gender</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="text10" required="">
+            <label>Hostel</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="text11" required="">
+            <label>Block</label>
+          </div>
+          
+            <input type="submit" name="submit"  class="btn btn-primary" required="">
+                 
+        </form>
+      </div>
+      <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwBCRLJ_Uxwge8iVkFwjB8cDiHSD3qKZ1QOsk52HPh1r4AQDs2F/exec'
+            const form = document.forms['form1']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Registering We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+</body>
+</html>
